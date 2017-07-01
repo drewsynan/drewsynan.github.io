@@ -1,0 +1,13 @@
+@import 'neat/neat-helpers';
+
+/////////////BREAKPOINTS/////////////
+// desktop -> > 800
+// mobile -> <= 800
+
+$mobile: new-breakpoint(max-width 850px 4);
+$mobile-landscape: new-breakpoint(
+  max-width 850px
+  orientation landscape
+  4);
+//$desktop: new-breakboint(min-width 851px);
+/////////////////////////////////////

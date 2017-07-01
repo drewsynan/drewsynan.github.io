@@ -1,0 +1,127 @@
+@import 'bourbon/bourbon';
+@import 'variables';
+@import 'grid-settings';
+@import 'neat/neat';
+
+html, 
+body {
+  border: 0;
+  color: $black;
+  font-family: $font-stack;
+  margin: 0;
+}
+
+.portrait {
+  bottom: 0;
+  height: 95%;
+  position: fixed;
+
+  @include media($mobile) {
+    position: initial;
+    width: 100%;
+    height: auto;
+    margin-top: 9vw;
+  }
+
+  @include media($mobile-landscape) {
+    height: 100vmin;
+    margin-top: 0;
+    width: auto;
+  }
+}
+
+.rubrication {
+  color: $rubrication-red;
+}
+
+header {
+  border-bottom: 3px solid $rubrication-red;
+  
+
+  h1 {
+    font-size: 36pt;
+    line-height: 36pt;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+
+    @include media($mobile) {
+      font-size: 9.5vw;
+      position: absolute;
+      top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      text-align: center;
+    }
+    @include media($mobile-landscape) {
+      text-align: right;
+      padding-right: 1em;
+      top: 20vmin;
+    }
+  }
+
+  h2 {
+    font-size: 12pt;
+    font-weight: normal;
+
+    @include media($mobile) {
+      font-size: 6vw;
+      text-align: center;
+    }
+
+    @include media($mobile-landscape) {
+      font-size: 5vmin;
+    }
+
+    a {
+      &:link {
+        color: $black;
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $black;
+      }
+    }
+  }
+}
+
+main {
+  max-width: 38%;
+  position: fixed;
+  right: 4%;
+  bottom: 3%;
+
+  @include media($mobile) {
+    position: initial;
+    max-width: 100%;
+    top: 0;
+    right: 0;
+    //padding-left: 2em;
+    //padding-right: 2em;
+    margin-bottom: 3em;
+  }
+
+  p {
+    font-size: 15pt;
+    line-height: 22pt;
+
+    @include media($mobile) {
+      font-size: 6vw;
+      line-height: 8vw;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+
+    @include media($mobile-landscape) {
+      font-size: 6vmin;
+      line-height: 8vmin;
+    }
+  }
+}
+
+strong {
+  color: $rubrication-red;
+  font-weight: bold;
+}
